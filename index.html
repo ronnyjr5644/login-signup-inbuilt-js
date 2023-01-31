@@ -1,29 +1,30 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="login.js"></script>
-  <link rel="stylesheet" type="text/css" href="login.css">
-  <title>Login to UReAd</title>
+<link rel="stylesheet" href="stylelogin.css">
+<script type="text/javascript" src="login.js"></script>
+
+<title> CSS Login Screen Tutorial </title>
 </head>
 <body>
-  
-    
-  
-  <div class="container">
-    
-    <h1>Welcome to UReAd</h1>
-    <p>Please enter your login details:</p>
-    <form>
-      <label for="userid">User ID:</label>
-      <input type="text" id="userid" name="userid" required pattern="^[a-zA-Z0-9]{6,10}$">
-      <br><br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$_]).{8,}$">
-      <br><br>
-      <input type="submit" value="Submit">
-      <br><br>
-      <a href="register.html">Not a member yet? Register here</a>
-    </form>
-  </div>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form class="login-form">
+          <input type="text" placeholder="username"/>
+          <input type="password" placeholder="password"/>
+          <button>login</button>
+          <p class="message">Not registered? <a href="register.html">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+</body>
 </body>
 </html>
