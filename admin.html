@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UReAd - Admin Screen</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Welcome to the UReAd Application</h1>
+  <h2>User List</h2>
+  <ul id="user-list">
+  </ul>
+
+  <script>
+    $(document).ready(function() {
+      // Fetch the list of users from the server
+      $.get("get_users.php", function(data) {
+        data = JSON.parse(data);
+        data.forEach(function(user) {
+          // Append each user to the list
+          $("#user-list").append("<li>" + user.username + "</li>");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
